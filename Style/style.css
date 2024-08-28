@@ -1,0 +1,313 @@
+/*font and style*/
+
+@font-face {
+font-family:lemonmilk;
+src:url(font/LEMONMILK-Bold.otf)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: "Roboto", Sans-Serif;
+font-weight: 400;
+font-style: normal;
+}
+
+p {
+font-size: 1rem;
+line-height: 1.9rem;
+}
+
+a {
+text-decoration: none;
+}
+
+.container {
+width: 1200px;
+margin: 0 auto;
+}
+
+@media screen and (max-width:1200px) {
+.container {
+width: 90%;
+}
+}
+
+/*logo and navbar*/
+.navbar {
+display: flex;
+justify-content: space-between;
+padding: 2rem 0;
+}
+
+.navbar ul {
+list-style-type: none;
+display: flex;
+gap: 3rem;
+align-items: center;
+}
+
+.logo {
+display: flex;
+align-items: center;
+font-weight: 800;
+font-size: 2rem;
+}
+
+.logo a {
+color: black;
+}
+
+.navbar ul li {
+display: flex;
+align-items: center;
+}
+
+.navbar ul li a {
+color: black;
+}
+
+/*burger btn */
+
+.burger div {
+width: 25px;
+height: 2px;
+background-color: #000;
+transition: all .3s;
+margin: 7px;
+z-index: 99;
+}
+
+.burger {
+display: none;
+z-index: 99;
+top: 33px;
+right: 35px;
+}
+
+/*title*/
+.section-title {
+margin: 1rem 0 4rem;
+font-size: 2rem;
+}
+
+
+.title {
+text-transform: uppercase;
+letter-spacing: 0.5rem;
+position: relative;
+padding-left: 40px;
+width: fit-content;
+font-weight: 400px;
+font-size: 0.9rem;
+}
+
+.title:before {
+content: "";
+width: 30px;
+height: 1px;
+background: #E8E8E8;
+position: absolute;
+display: block;
+left: 0;
+top: 50%;
+}
+
+/*layout*/
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 3rem;
+justify-items: center;
+}
+
+/*hero section*/
+#hero {
+height: 720px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+}
+
+.hero-left {
+margin: 0 2rem;
+}
+
+
+.hero-name {
+font-size: 3rem;
+font-weight: 800;
+margin: 0.5rem 15px 1rem;
+}
+
+.hero-right img {
+width: 90%;
+}
+
+.hero-right {
+display: flex;
+justify-content: center;
+}
+
+/*services section*/
+#services {
+background-color: #fbfbfb;
+padding: 6rem 0;
+}
+
+.services-container .title {
+margin: 0 auto;
+}
+
+.services-title {
+text-align: center;
+}
+
+.service {
+padding: 3rem 2rem;
+text-align: center;
+gap: 3rem;
+background-color: #fbfbfb;
+}
+
+.service h4 {
+margin: 1.5rem 0;
+font-weight: 500;
+font-size: 1.05rem;
+
+}
+
+/*skill section*/
+
+#skill {
+padding: 6rem 0;
+}
+
+.skill {
+width: 20%;
+height: 20%;
+margin-top: 130px;
+}
+
+.skill h4 {
+text-align: center;
+margin: 1.5rem 0;
+font-weight: 500;
+font-size: 1.05rem;
+}
+
+.skill-icon {
+text-align: center;
+
+}
+
+/*project section*/
+#Project {
+background-color: #fafafa;
+padding: 6rem 0;
+}
+
+.project-img h1 {
+font-size: 100px;
+margin: 200px 0 300px;
+}
+
+/*contact section*/
+#contact {
+padding: 6rem 0;
+}
+
+.contact {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+gap: 3rem;
+}
+
+.contact-form div {
+margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+width: 100%;
+padding: 0.75rem 1.3rem;
+font-family: "Roboto", Sans-Serif;
+background-color: #fbfbfb;
+border: 1px solid #ffff;
+border-radius: 3px;
+resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+color: #9d9fa1;
+}
+
+.contact-form input:focus,.contact-form textarea:focus {
+outline: none;
+border: 1px solid #7d7d7d7d;
+}
+
+.btn-submit {
+width: 100%;
+padding: 0.75rem 1.3rem;
+background-color: #6b6b6b;
+color: #ffff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+transition: .2s ease-in-out;
+}
+
+.btn-submit:hover {
+background-color: #5a5a5a;
+}
+
+.contact-item {
+display: flex;
+gap: 1.5rem;
+margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+width: 53px;
+height: 53px;
+border-radius: 9px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.contact-item-detail h4 {
+margin-bottom: 0.6rem;
+}
+
+/*footer*/
+footer {
+padding: 4rem 0;
+background: #fafafa;
+text-align: center;
+}
+
+.footer-icon {
+margin-bottom: 1rem;
+}
+
+.footer-icon a {
+margin: 0 0.5rem;
+}
+
+.footer-icon svg {
+fill: #3e3f40;
+}
+
+.footer-icon a :hover svg {
+fill: #000;
+}
